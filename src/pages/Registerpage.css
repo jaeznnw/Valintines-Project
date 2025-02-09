@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+  background-color: #ffebef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.valentine-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.valentine-title {
+  font-size: 2.5rem;
+  font-family: 'Sacramento', cursive;
+  color: #ff4d6d;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.valentine-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+  text-align: center;
+  width: 350px;
+}
+
+.valentine-card::before {
+  content: "💘";
+  font-size: 3rem;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 3px solid #ff4d6d;
+  border-radius: 12px;
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+}
+
+.valentine-button {
+  background: linear-gradient(45deg, #ff4d6d, #ff80a1);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  font-weight: bold;
+  border: 3px solid #ff4d6d;
+  box-shadow: 0px 3px 10px rgba(255, 77, 109, 0.5);
+}
+
+.valentine-button:hover {
+  background: linear-gradient(45deg, #ff80a1, #ff4d6d);
+  box-shadow: 0px 5px 15px rgba(255, 77, 109, 0.7);
+}
+
+.valentine-error {
+  color: red;
+  font-size: 14px;
+}
+
+@keyframes floatingHearts {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+}
+
+.valentine-container::before {
+  content: "💖💘💕";
+  font-size: 3rem;
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: floatingHearts 3s infinite ease-in-out;
+}
